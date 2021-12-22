@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abyss Engine</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="icon" href="abyssbadge.png">
+  <script type="text/javascript" src="scripts/doT.min.js"></script>
+  <script type="text/javascript" src="scripts/dynload.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="includeHTML()">
+  <div w3-include-html="views/navbar.html"></div>
+
+  <section class="section">
+    <h1 class="title">Downloads</h1>
+    <div class="box">
+      <h4 class="title is-4">Pre-Alpha (Rolling)</h4>
+      <div style="margin-bottom: 16px;">
+        This release is always up to date with the current source code.
+      </div>
+      <ul>
+        <button class="button" onclick="location.href='https://github.com/AbyssEngine/AbyssEngine/releases/download/unstable/abyss-windows.zip'">
+          <span class="material-icons">sim_card_download</span>&nbsp;&nbsp;Windows (x64)
+        </button>
+        <button class="button" onclick="location.href='https://github.com/AbyssEngine/AbyssEngine/releases/download/unstable/abyss-linux.tar.gz'">
+          <span class="material-icons">sim_card_download</span>&nbsp;&nbsp;Linux (Ubuntu x64)
+        </button>
+        <button class="button" onclick="location.href='https://github.com/AbyssEngine/AbyssEngine/releases/download/unstable/abyss-darwin.dmg'">
+          <span class="material-icons">sim_card_download</span>&nbsp;&nbsp;MacOS (Intel x64)
+        </button>
+      </ul>
+    </div>
+  </section>
+
+  <div w3-include-html="views/footer.html"></div>
+</body>
+
+</html>

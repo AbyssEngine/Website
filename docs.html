@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Abyss Engine</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="icon" href="abyssbadge.png">
-  <script type="text/javascript" src="scripts/doT.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script type="text/javascript" src="scripts/xml2json.js"></script>
   <script type="text/javascript" src="scripts/dynload.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -17,9 +22,102 @@
 
   <section class="section">
     <h1 class="title">Documentation</h1>
+    <div id="help-content"></div>
   </section>
 
   <div w3-include-html="views/footer.html"></div>
+
+  <div id="help-template" style="display:none">
+    <div class="columns">
+      <div class="column is-one-quarter">
+        <div class="box">
+          <ul>
+            {{#each types}}
+            <li><a href="#type-{{@key}}" style="font-weight: bold">{{@key}}</a>
+              <ul style="margin-left: 14px;margin-bottom:16px;">
+                {{#each properties}}
+                <li style="font-size: 0.8em;"><a href="#prop-{{@../key}}-{{@key}}">.{{@key}}</a></li>
+                {{/each}}
+                {{#if isNode}}
+                {{#each @root.types.Node.functions}}
+                <li style="font-size: 0.8em;"><a href="#func-Node-{{@key}}">{{@key}}</a></li>
+                {{/each}}
+                {{/if}}
+                {{#each functions}}
+                <li style="font-size: 0.8em;"><a href="#func-{{@../key}}-{{@key}}">{{@key}}</a></li>
+                {{/each}}
+              </ul>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+      <div class="column">
+        {{#each types}}
+        <div class="box">
+          <a name="type-{{@key}}"></a>
+          <h3 class="title is-3">{{@key}}</h3>
+          <div class="type-description">{{this.description}}</div>
+          {{#if properties}}
+          <h5 class="title is-5" style="margin-bottom: 5px;margin-top: 16px;">Properties</h5>
+          <div class="func-params">
+            {{#each properties}}
+            <div class="param-item">
+              <a name="prop-{{@../key}}-{{@key}}"></a>
+              <span class="param-name">{{@key}}</span><span class="param-type">{{type}}</span>
+              <div style="margin-bottom: 6px; font-size:0.9em;">{{description}}</div>
+            </div>
+            {{/each}}
+        </div>
+          {{/if}}
+          {{#each functions}}
+          <hr />
+          <div>
+            <a name="func-{{@../key}}-{{@key}}"></a>
+            <h4 class="title is-4">
+              {{@key}}({{funcparams this.params}}) {{#if returns}}<span class="func-return-type">{{returns.type}}</span>{{/if}}
+            </h4>
+            <div class="func-description">{{this.description}}</div>
+            {{#if this.params}}
+            <h5 class="title is-5" style="margin-bottom: 5px;">Parameters</h5>
+            <div class="func-params">
+              {{#each this.params}}
+              <div class="param-item">
+                <span class="param-name">{{@key}}</span><span class="param-type">{{type}}</span>
+              </div>
+              <div class="param-desc">{{description}}</div>
+              {{/each}}
+            </div>
+            {{/if}}
+            {{#if returns}}
+            <h5 class="title is-5" style="margin-bottom: 5px;">Returns</h5>
+            <div class="func-returns">
+              {{returns.description}}
+            </div>
+            {{/if}}
+          </div>
+          {{/each}}
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  <script>
+    $.ajax({
+      url: "help/spec.json",
+      dataType: 'json',
+      success: function (data) {
+        Handlebars.registerHelper('funcparams', obj => obj == null ? '' : Object.keys(obj).join(", "))
+
+        var template = Handlebars.compile(document.getElementById("help-template").innerHTML)
+        document.getElementById("help-content").innerHTML = template(data)
+      },
+      error: function () {
+
+      }
+    })
+
+  </script>
 </body>
 
 </html>

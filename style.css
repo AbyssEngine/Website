@@ -22,3 +22,44 @@
     /* Support for IE. */
     font-feature-settings: 'liga';
   }
+
+  .type-description {
+  }
+
+  .func-description {
+    margin-bottom: 22px;
+  }
+
+  .func-params {
+    margin-left: 14px;
+  }
+  
+  .param-item:before {
+    content: '-';
+  }
+
+  .param-name {
+    font-weight: bold;
+  }
+
+  .param-type {
+    color: blue;
+    margin-left: 6px;
+    font-style: italic;
+  }
+
+  .param-desc {
+    margin-bottom: 14px;
+    font-size:0.9em;
+  }
+
+  .func-return-type {
+    font-weight: lighter;
+    font-size: 0.7em;
+    color: blue;
+    margin-right: 8px;
+  }
+  .func-returns {
+    margin-left: 14px;
+    font-size:0.9em;
+  }

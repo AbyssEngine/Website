@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Abyss Engine</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="icon" href="abyssbadge.png">
-  <script type="text/javascript" src="scripts/doT.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   <script type="text/javascript" src="scripts/dynload.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -23,8 +24,17 @@
       <p class="subtitle">
         The <strong>ARPG</strong> game engine
       </p>
+      <div class="content">
+        AbyssEngine is a game engine designed to run games similar to 2000's style ARPGs such as Diablo II.
+      </div>
+      <div class="content">
+        This repository provides the core engine AbyssEngine Engine, as well as the AbyssEngine Toolset. It also
+        includes the library libAbyss, which is used by this project, and can be used by 3rd party applications as well.
+      </div>
+      <div class="content">
+        NOTE: This is just the engine core. It will not run by itself.
+      </div>
     </div>
-
   </section>
 
   <div w3-include-html="views/footer.html"></div>

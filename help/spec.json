@@ -1,0 +1,432 @@
+{
+    "types": {
+        "abyss": {
+            "description": "The main module for interacting with the abyss engine.",
+            "functions": {
+                "addLoadProvider": {
+                    "description": "Adds a loader provider.",
+                    "params": {
+                        "providerType": { "type": "string", "description": "The type of provider to add ('mpq', 'casc', 'filesystem')."},
+                        "providerPath": { "type": "string", "description": "The source path for the provider to use." }
+                    }
+                },
+                "createButton": {
+                    "description": "Creates a button.",
+                    "returns": { "type": "Button", "description": "The button that was created."},
+                    "params": {
+                        "image": { "type": "Image", "description": "The image to use for the button sprites."}
+                    }
+                },
+                "createInputListener": {
+                    "description": "Creates an input listener.",
+                    "returns": { "type": "InputListener", "description": "The input listener that was created." }
+                },
+                "createLabel": {
+                    "description": "Creates a label.",
+                    "returns": { "type": "Label", "description": "The label that was created." },
+                    "params": {
+                        "font": { "type": "IFont", "description": "The font to use for this label." }
+                    }
+                },
+                "createMapRenderer": {
+                    "description": "Creates a map renderer.",
+                    "returns": { "type": "MapRenderer", "description": "The new map renderer that was created." },
+                    "params": {
+                        "zone": { "type": "Zone", "description": "The zone the map renderer will render." }
+                    }
+                },
+                "createNode": {
+                    "description": "Creates a node.",
+                    "returns": { "type": "Node", "description": "The new node that was created." }
+                },
+                "createPalette": {
+                    "description": "Creates a new palette.",
+                    "params": {
+                        "paletteName": { "type": "string", "description": "The name of the palette." },
+                        "path": { "type": "string", "description": "The file path to the palette file." }
+                    }
+                },
+                "createSoundEffect": {
+                    "description": "Create a sound effect.",
+                    "returns": { "type": "SoundEffect", "description": "The created sound effect." },
+                    "params": {
+                        "fileName": { "type": "string", "description": "The name of the file to load." }
+                    }
+                },
+                "createSprite": {
+                    "description": "Creates a sprite from the specified image.",
+                    "returns": { "type": "Sprite", "description": "The created sprite." },
+                    "params": {
+                        "image": { "type": "Image", "description": "The image to be used for the sprite. Needs to be alive at least as long as the sprite is." }
+                    }
+                },
+                "createSpriteFont": {
+                    "description": "Creates a sprite font.",
+                    "returns": { "type": "SpriteFont", "description": "The created sprite font." },
+                    "params": {
+                        "fontPath": { "type": "string", "description": "The path to the font file." },
+                        "paletteName": { "type": "string", "description": "The name of the palette to use for the font." }
+                    }
+                },
+                "createTtfFont": {
+                    "description": "Creates a TTF font.",
+                    "returns": { "type": "TtfFont", "description": "The created TTF font." },
+                    "params": {
+                        "fontPath": { "type": "string", "description": "The path to the font file." },
+                        "size": { "type": "number", "description": "The size of the font." },
+                        "hinting": { "type": "string", "description": "The hinting to use for the font ('light', 'mono', 'normal', 'none'." }
+                    }
+                },
+                "isKeyPressed": {
+                    "description": "Determines if a key was pressed.",
+                    "returns": { "type": "boolean", "description": "True if the key is pressed, false otherwise." },
+                    "params": {
+                        "scancode": { "type": "number", "description": "The scancode to test." }
+                    }
+                },
+                "loadDS1": {
+                    "description": "Loads a DS1 stamp.",
+                    "returns": { "type": "DS1", "description": "The created DS1 stamp." },
+                    "params": {
+                        "fileName": { "type": "string", "description": "The name of the file to load." }
+                    }
+                },
+                "loadImage": {
+                    "description": "Loads an image.",
+                    "returns": { "type": "Image", "description": "The loaded image." },
+                    "params": {
+                        "spritePath": { "type": "string", "description": "The path to the sprite file." },
+                        "paletteName": { "type": "string", "description": "The name of the palette to use for the sprite." }
+                    }
+                },
+                "loadString": {
+                    "description": "Loads a text file.",
+                    "returns": { "type": "string", "description": "The text of the file." },
+                    "params": {
+                        "filePath": { "type": "string", "description": "The path of the file to load." }
+                    }
+                },
+                "createZone": {
+                    "description": "Creates a zone (map/game area).",
+                    "returns": { "type": "Zone", "description": "The created zone." }
+                },
+                "fileExists": {
+                    "description": "Determines if a file exists.",
+                    "returns": { "type": "boolean", "description": "True if the file exists, false otherwise." },
+                    "params": {
+                        "fileName": { "type": "string", "description": "The name of the file to check." }
+                    }
+                },
+                "getConfig": {
+                    "description": "Gets a configuration value.",
+                    "returns": { "type": "string", "description": "The value of the specified category and variable." },
+                    "params": {
+                        "category": { "type": "string", "description": "The category that the variable is defined under." },
+                        "value": { "type": "string", "description": "The name of the variable who's value you want to get." }
+                    }
+                },
+                "getRootNode": {
+                    "description": "Gets the root node.",
+                    "returns": { "type": "Node", "description": "The root node." }
+                },
+                "log": {
+                    "description": "Logs a message.",
+                    "params": {
+                        "level": { "type": "string", "description": "The log level ('debug', 'info', 'warn', 'error', 'fatal')" },
+                        "message": { "type": "string", "description": "The message to log." }
+                    }
+                },
+                "orthoToWorld": {
+                    "description": "Converts orthographic coordinates to world coordinates.",
+                    "returns": { "type": "number, number", "description": "The X/Y world coordinates." },
+                    "params": {
+                        "x": { "type": "number", "description": "The ortho X coordinate." },
+                        "y": { "type": "number", "description": "The ortho Y coordinate." }
+                    }
+                },
+                "playBackgroundMusic": {
+                    "description": "Plays looping background music.",
+                    "params": {
+                        "fileName": { "type": "string", "description": "The name of the file to play. If blank, background music will stop playing." }
+                    }
+                },
+                "playVideo": {
+                    "description": "Plays a video.",
+                    "params": {
+                        "videoPath": { "type": "string", "description": "The path to the video file." },
+                        "callback": { "type": "function()", "description": "The callback to call when the video is finished." }
+                    }
+                },
+                "playVideoAndAudio": {
+                    "description": "Plays video and audio (for videos with separate audio tracks).",
+                    "params": {
+                        "videoPath": { "type": "string", "description": "The path to the video file." },
+                        "audioPath": { "type": "string", "description": "The path to the audio file." },
+                        "callback": { "type": "function()", "description": "The callback to call when the video is finished." }
+                    }
+                },
+                "resetMouseState": {
+                    "description": "Resets the mouse button state."
+                },
+                "setCursor": {
+                    "description": "Sets the cursor sprite and offsets.",
+                    "params": {
+                        "sprite": { "type": "Sprite", "description": "The sprite to use for the cursor." },
+                        "offsetX": { "type": "number", "description": "The X offset of the cursor." },
+                        "offsetY": { "type": "number", "description": "The Y offset of the cursor." }
+                    }
+                },
+                "showSystemCursor": {
+                    "description": "Sets the visibility of the system cursor.",
+                    "params": {
+                        "show": { "type": "boolean", "description": "The visibility of the system cursor." }
+                    }
+                },
+                "shutdown": {
+                    "description": "Immediately shuts down the engine."
+                },
+                "utf16To8": {
+                    "description": "Converts UTF16 strings to UTF8 strings.",
+                    "returns": { "type": "string", "description": "The string in UTF8 format." },
+                    "params": {
+                        "sourceString": { "type": "string", "description": "The string in UTF16 format." }
+                    }
+                },
+                "worldToOrtho": {
+                    "description": "Converts world coordinates to orthographic coordinates.",
+                    "returns": { "type": "number, number", "description": "The X/Y ortho coordinates." },
+                    "params": {
+                        "worldX": { "type": "number", "description": "The world X coordinate." },
+                        "worldY": { "type": "number", "description": "The world Y coordinate." }
+                    }
+                }
+            }
+        },
+        "Node": {
+            "description": "Represents a basic node, typically used to group nodes together.",
+            "functions": {
+                "nodeType": {
+                    "description": "Returns the type of this node.",
+                    "returns": { "type": "string", "description": "The type of this node." }
+                },
+                "removeAllChildren": {
+                    "description": "Removes all children owned by this node."
+                },
+                "appendChild": {
+                    "description": "Appends a child to this node.",
+                    "params": {
+                        "childNode": { "type": "Node", "description": "The node to append to this node." }
+                    }
+                },
+                "removeChild": {
+                    "description": "Removes a child from this node.",
+                    "params": {
+                        "childNode": { "type": "Node", "description": "The node to remove." }
+                    }
+                },
+                "getChildren": {
+                    "description": "Returns the nodes that are children of this node.",
+                    "returns": { "type": "Node[]", "description": "A table of nodes representing the children of this node." }
+                },
+                "getPosition": {
+                    "description": "Gets the X/Y position of the node, relative to its parent.",
+                    "returns": { "type": "number, number", "description": "The X/Y position of the node, relative to its parent." }
+                },
+                "setPosition": {
+                    "description": "Sets the X/Y position of the node, relative to its parent.",
+                    "params": {
+                        "x": { "type": "number", "description": "The relative X coordinate." },
+                        "y": { "type": "number", "description": "The relative Y coordinate." }
+                    }
+                },
+                "onUpdate": {
+                    "description": "Sets a callback handler for this node, which is triggered when the node is updated.",
+                    "params": {
+                        "callback": { "type": "functions(ticks number)", "description": "The handler function that will be called each time this node is updated." }
+                    }
+                }
+            }
+        },
+        "IFont": {
+            "description": "Represents an abstract reference to a font (TTF or Sprite)."
+        },
+        "TtfFont": {
+            "description": "Represents a reference to a TTF font."
+        },
+        "SpriteFont": {
+            "description": "Represents a reference to a sprite font."
+        },
+        "Image": {
+            "description": "Represents an image.",
+            "functions": {
+                "getFrameSize": {
+                    "description": "Gets the frame size of this image.",
+                    "returns": { "type": "number, number", "description": "Gets the Width/Height of this image." }
+                },
+                "getNumberOfFrames": {
+                    "description": "Gets the number of frames in this image.",
+                    "returns": { "type": "number", "description": "The number of frames in this image." }
+                }
+            }
+        },
+        "Button": {
+            "description": "Represents a UI button. Buttons are a type of node",
+            "isNode": true,
+            "properties": {
+                "disabled": { "type": "boolean", "description": "True if the button is disabled, false otherwise." },
+                "checked": { "type": "boolean", "description": "True if the button is checked. false otherwise." }
+            },
+            "functions": {
+                "setSegments": {
+                    "description": "",
+                    "returns": { "type": "", "description": ""},
+                    "params": {}
+                },
+                "setFixedSize": {
+                    "description": "",
+                    "returns": { "type": "", "description": ""},
+                    "params": {}
+                },
+                "setPressedOffset": {
+                    "description": "",
+                    "returns": { "type": "", "description": ""},
+                    "params": {}
+                },
+                "setFrameIndex": {
+                    "description": "",
+                    "returns": { "type": "", "description": ""},
+                    "params": {}
+                },
+                "onActivate": {
+                    "description": "",
+                    "returns": { "type": "", "description": ""},
+                    "params": {}
+                },
+                "onPressed": {
+                    "description": "",
+                    "returns": { "type": "", "description": ""},
+                    "params": {}
+                },
+                "onMouseEnter": {
+                    "description": "",
+                    "returns": { "type": "", "description": ""},
+                    "params": {}
+                },
+                "onMouseLeave": {
+                    "description": "",
+                    "returns": { "type": "", "description": ""},
+                    "params": {}
+                }
+            }
+        },
+        "Label": {
+            "description": "Represents a label. Labels are a type of node",
+            "isNode": true,
+            "properties": {
+                "caption": { "type": "", "description": "" },
+                "blendMode": { "type": "", "description": "" },
+                "bold": { "type": "", "description": "" },
+                "italic": { "type": "", "description": "" },
+                "underline": { "type": "", "description": "" },
+                "strikethrough": { "type": "", "description": "" },
+                "verticalSpacing": { "type": "", "description": "" }
+            },
+            "functions": {
+                "setAlignment": {
+                    "description": "",
+                    "returns": { "type": "", "description": "" },
+                    "params": {}
+                },
+                "setColorMod": {
+                    "description": "",
+                    "returns": { "type": "", "description": "" },
+                    "params": {}
+                }
+            }
+        },
+        "Sprite": {
+            "description": "Represents a sprite. Sprites are a type of node.",
+            "isNode": true,
+            "properties": {
+                "blendMode": { "type": "", "description": "" },
+                "bottomOrigin": { "type": "", "description": "" },
+                "playMode": { "type": "", "description": "" },
+                "currentFrameIndex": { "type": "", "description": "" }
+            },
+            "functions": {
+                "setCellSize": {
+                    "description": "",
+                    "returns": { "type": "", "description": "" },
+                    "params": {}
+                },
+                "getCellSize": {
+                    "description": "",
+                    "returns": { "type": "", "description": "" },
+                    "params": {}
+                },
+                "onMouseButtonDown": {
+                    "description": "",
+                    "returns": { "type": "", "description": "" },
+                    "params": {}
+                },
+                "onMouseButtonUp": {
+                    "description": "",
+                    "returns": { "type": "", "description": "" },
+                    "params": {}
+                }
+            }
+        },
+        "InputListener": {
+            "description": "Represents an Input Kistener.",
+            "isNode": true,
+            "functions": {
+                "onMouseButton": {
+                    "description": "",
+                    "returns": { "type": "", "description": "" }
+                },
+                "onMouseMove": {
+                    "description": "",
+                    "returns": { "type": "", "description": "" }
+                },
+                "onKey": {
+                    "description": "",
+                    "returns": { "type": "", "description": "" }
+                }
+            }
+        },
+        "SoundEffect": {
+            "description": "Represents a sound effect.",
+            "properties": {
+                "volume": { "type": "", "description": "" },
+                "loop": { "type": "", "description": "" }
+            },
+            "functions": {
+                "play": {
+                    "description": "",
+                    "returns": { "type": "", "description": "" },
+                    "params": {}
+                },
+                "stop": {
+                    "description": "",
+                    "returns": { "type": "", "description": "" },
+                    "params": {}
+                },
+                "pause": {
+                    "description": "",
+                    "returns": { "type": "", "description": "" },
+                    "params": {}
+                },
+                "isPlaying": {
+                    "description": "",
+                    "returns": { "type": "", "description": "" },
+                    "params": {}
+                },
+                "isPaused": {
+                    "description": "",
+                    "returns": { "type": "", "description": "" },
+                    "params": {}
+                }
+            }
+        }
+    }
+}

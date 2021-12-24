@@ -63,3 +63,26 @@
     margin-left: 14px;
     font-size:0.9em;
   }
+
+  .table-item {
+    padding-left: 14px;
+  }
+
+  .table-item:nth-child(odd) {
+    background-color: #eee;
+  }
+
+  .table-item-type {
+    font-size: 0.9em;
+    color: blue;
+    font-style: italic;
+  }
+
+  .table-item-value:before {
+    content:' = '
+  }
+
+  .table-item-name {
+    width: 220px;
+    display:inline-block;
+  }

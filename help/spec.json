@@ -6,163 +6,322 @@
                 "addLoadProvider": {
                     "description": "Adds a loader provider.",
                     "params": {
-                        "providerType": { "type": "string", "description": "The type of provider to add ('mpq', 'casc', 'filesystem')."},
-                        "providerPath": { "type": "string", "description": "The source path for the provider to use." }
+                        "providerType": {
+                            "type": "string",
+                            "description": "The type of provider to add ('mpq', 'casc', 'filesystem')."
+                        },
+                        "providerPath": {
+                            "type": "string",
+                            "description": "The source path for the provider to use."
+                        }
                     }
                 },
                 "createButton": {
                     "description": "Creates a button.",
-                    "returns": { "type": "Button", "description": "The button that was created."},
+                    "returns": {
+                        "type": "Button",
+                        "description": "The button that was created."
+                    },
                     "params": {
-                        "image": { "type": "Image", "description": "The image to use for the button sprites."}
+                        "image": {
+                            "type": "Image",
+                            "description": "The image to use for the button sprites."
+                        }
                     }
                 },
                 "createInputListener": {
                     "description": "Creates an input listener.",
-                    "returns": { "type": "InputListener", "description": "The input listener that was created." }
+                    "returns": {
+                        "type": "InputListener",
+                        "description": "The input listener that was created."
+                    }
                 },
                 "createLabel": {
                     "description": "Creates a label.",
-                    "returns": { "type": "Label", "description": "The label that was created." },
+                    "returns": {
+                        "type": "Label",
+                        "description": "The label that was created."
+                    },
                     "params": {
-                        "font": { "type": "IFont", "description": "The font to use for this label." }
+                        "font": {
+                            "type": "IFont",
+                            "description": "The font to use for this label."
+                        }
                     }
                 },
                 "createMapRenderer": {
                     "description": "Creates a map renderer.",
-                    "returns": { "type": "MapRenderer", "description": "The new map renderer that was created." },
+                    "returns": {
+                        "type": "MapRenderer",
+                        "description": "The new map renderer that was created."
+                    },
                     "params": {
-                        "zone": { "type": "Zone", "description": "The zone the map renderer will render." }
+                        "zone": {
+                            "type": "Zone",
+                            "description": "The zone the map renderer will render."
+                        }
                     }
                 },
                 "createNode": {
                     "description": "Creates a node.",
-                    "returns": { "type": "Node", "description": "The new node that was created." }
+                    "returns": {
+                        "type": "Node",
+                        "description": "The new node that was created."
+                    }
                 },
                 "createPalette": {
                     "description": "Creates a new palette.",
                     "params": {
-                        "paletteName": { "type": "string", "description": "The name of the palette." },
-                        "path": { "type": "string", "description": "The file path to the palette file." }
+                        "paletteName": {
+                            "type": "string",
+                            "description": "The name of the palette."
+                        },
+                        "path": {
+                            "type": "string",
+                            "description": "The file path to the palette file."
+                        }
                     }
                 },
                 "createSoundEffect": {
                     "description": "Create a sound effect.",
-                    "returns": { "type": "SoundEffect", "description": "The created sound effect." },
+                    "returns": {
+                        "type": "SoundEffect",
+                        "description": "The created sound effect."
+                    },
                     "params": {
-                        "fileName": { "type": "string", "description": "The name of the file to load." }
+                        "fileName": {
+                            "type": "string",
+                            "description": "The name of the file to load."
+                        }
                     }
                 },
                 "createSprite": {
                     "description": "Creates a sprite from the specified image.",
-                    "returns": { "type": "Sprite", "description": "The created sprite." },
+                    "returns": {
+                        "type": "Sprite",
+                        "description": "The created sprite."
+                    },
                     "params": {
-                        "image": { "type": "Image", "description": "The image to be used for the sprite. Needs to be alive at least as long as the sprite is." }
+                        "image": {
+                            "type": "Image",
+                            "description": "The image to be used for the sprite. Needs to be alive at least as long as the sprite is."
+                        }
                     }
                 },
                 "createSpriteFont": {
                     "description": "Creates a sprite font.",
-                    "returns": { "type": "SpriteFont", "description": "The created sprite font." },
+                    "returns": {
+                        "type": "SpriteFont",
+                        "description": "The created sprite font."
+                    },
                     "params": {
-                        "fontPath": { "type": "string", "description": "The path to the font file." },
-                        "paletteName": { "type": "string", "description": "The name of the palette to use for the font." }
+                        "fontPath": {
+                            "type": "string",
+                            "description": "The path to the font file."
+                        },
+                        "paletteName": {
+                            "type": "string",
+                            "description": "The name of the palette to use for the font."
+                        }
                     }
                 },
                 "createTtfFont": {
                     "description": "Creates a TTF font.",
-                    "returns": { "type": "TtfFont", "description": "The created TTF font." },
+                    "returns": {
+                        "type": "TtfFont",
+                        "description": "The created TTF font."
+                    },
                     "params": {
-                        "fontPath": { "type": "string", "description": "The path to the font file." },
-                        "size": { "type": "number", "description": "The size of the font." },
-                        "hinting": { "type": "string", "description": "The hinting to use for the font ('light', 'mono', 'normal', 'none'." }
+                        "fontPath": {
+                            "type": "string",
+                            "description": "The path to the font file."
+                        },
+                        "size": {
+                            "type": "number",
+                            "description": "The size of the font."
+                        },
+                        "hinting": {
+                            "type": "string",
+                            "description": "The hinting to use for the font ('light', 'mono', 'normal', 'none'."
+                        }
                     }
                 },
                 "isKeyPressed": {
                     "description": "Determines if a key was pressed.",
-                    "returns": { "type": "boolean", "description": "True if the key is pressed, false otherwise." },
+                    "returns": {
+                        "type": "boolean",
+                        "description": "True if the key is pressed, false otherwise."
+                    },
                     "params": {
-                        "scancode": { "type": "number", "description": "The scancode to test." }
+                        "scancode": {
+                            "type": "number",
+                            "description": "The scancode to test."
+                        }
                     }
                 },
                 "loadDS1": {
                     "description": "Loads a DS1 stamp.",
-                    "returns": { "type": "DS1", "description": "The created DS1 stamp." },
+                    "returns": {
+                        "type": "DS1",
+                        "description": "The created DS1 stamp."
+                    },
                     "params": {
-                        "fileName": { "type": "string", "description": "The name of the file to load." }
+                        "fileName": {
+                            "type": "string",
+                            "description": "The name of the file to load."
+                        }
                     }
                 },
                 "loadImage": {
                     "description": "Loads an image.",
-                    "returns": { "type": "Image", "description": "The loaded image." },
+                    "returns": {
+                        "type": "Image",
+                        "description": "The loaded image."
+                    },
                     "params": {
-                        "spritePath": { "type": "string", "description": "The path to the sprite file." },
-                        "paletteName": { "type": "string", "description": "The name of the palette to use for the sprite." }
+                        "spritePath": {
+                            "type": "string",
+                            "description": "The path to the sprite file."
+                        },
+                        "paletteName": {
+                            "type": "string",
+                            "description": "The name of the palette to use for the sprite."
+                        }
                     }
                 },
                 "loadString": {
                     "description": "Loads a text file.",
-                    "returns": { "type": "string", "description": "The text of the file." },
+                    "returns": {
+                        "type": "string",
+                        "description": "The text of the file."
+                    },
                     "params": {
-                        "filePath": { "type": "string", "description": "The path of the file to load." }
+                        "filePath": {
+                            "type": "string",
+                            "description": "The path of the file to load."
+                        }
+                    }
+                },
+                "loadTbl": {
+                    "description": "Loads a tbl file.",
+                    "returns": {
+                        "type": "{}", "description": "A table representing the tbl file loaded."
+                    },
+                    "params": {
+                        "filePath": { "type": "string", "description": "The path to the tbl file to load." }
                     }
                 },
                 "createZone": {
                     "description": "Creates a zone (map/game area).",
-                    "returns": { "type": "Zone", "description": "The created zone." }
+                    "returns": {
+                        "type": "Zone",
+                        "description": "The created zone."
+                    }
                 },
                 "fileExists": {
                     "description": "Determines if a file exists.",
-                    "returns": { "type": "boolean", "description": "True if the file exists, false otherwise." },
+                    "returns": {
+                        "type": "boolean",
+                        "description": "True if the file exists, false otherwise."
+                    },
                     "params": {
-                        "fileName": { "type": "string", "description": "The name of the file to check." }
+                        "fileName": {
+                            "type": "string",
+                            "description": "The name of the file to check."
+                        }
                     }
                 },
                 "getConfig": {
                     "description": "Gets a configuration value.",
-                    "returns": { "type": "string", "description": "The value of the specified category and variable." },
+                    "returns": {
+                        "type": "string",
+                        "description": "The value of the specified category and variable."
+                    },
                     "params": {
-                        "category": { "type": "string", "description": "The category that the variable is defined under." },
-                        "value": { "type": "string", "description": "The name of the variable who's value you want to get." }
+                        "category": {
+                            "type": "string",
+                            "description": "The category that the variable is defined under."
+                        },
+                        "value": {
+                            "type": "string",
+                            "description": "The name of the variable who's value you want to get."
+                        }
                     }
                 },
                 "getRootNode": {
                     "description": "Gets the root node.",
-                    "returns": { "type": "Node", "description": "The root node." }
+                    "returns": {
+                        "type": "Node",
+                        "description": "The root node."
+                    }
                 },
                 "log": {
                     "description": "Logs a message.",
                     "params": {
-                        "level": { "type": "string", "description": "The log level ('debug', 'info', 'warn', 'error', 'fatal')" },
-                        "message": { "type": "string", "description": "The message to log." }
+                        "level": {
+                            "type": "string",
+                            "description": "The log level ('debug', 'info', 'warn', 'error', 'fatal')"
+                        },
+                        "message": {
+                            "type": "string",
+                            "description": "The message to log."
+                        }
                     }
                 },
                 "orthoToWorld": {
                     "description": "Converts orthographic coordinates to world coordinates.",
-                    "returns": { "type": "number, number", "description": "The X/Y world coordinates." },
+                    "returns": {
+                        "type": "number, number",
+                        "description": "The X/Y world coordinates."
+                    },
                     "params": {
-                        "x": { "type": "number", "description": "The ortho X coordinate." },
-                        "y": { "type": "number", "description": "The ortho Y coordinate." }
+                        "x": {
+                            "type": "number",
+                            "description": "The ortho X coordinate."
+                        },
+                        "y": {
+                            "type": "number",
+                            "description": "The ortho Y coordinate."
+                        }
                     }
                 },
                 "playBackgroundMusic": {
                     "description": "Plays looping background music.",
                     "params": {
-                        "fileName": { "type": "string", "description": "The name of the file to play. If blank, background music will stop playing." }
+                        "fileName": {
+                            "type": "string",
+                            "description": "The name of the file to play. If blank, background music will stop playing."
+                        }
                     }
                 },
                 "playVideo": {
                     "description": "Plays a video.",
                     "params": {
-                        "videoPath": { "type": "string", "description": "The path to the video file." },
-                        "callback": { "type": "function()", "description": "The callback to call when the video is finished." }
+                        "videoPath": {
+                            "type": "string",
+                            "description": "The path to the video file."
+                        },
+                        "callback": {
+                            "type": "function()",
+                            "description": "The callback to call when the video is finished."
+                        }
                     }
                 },
                 "playVideoAndAudio": {
                     "description": "Plays video and audio (for videos with separate audio tracks).",
                     "params": {
-                        "videoPath": { "type": "string", "description": "The path to the video file." },
-                        "audioPath": { "type": "string", "description": "The path to the audio file." },
-                        "callback": { "type": "function()", "description": "The callback to call when the video is finished." }
+                        "videoPath": {
+                            "type": "string",
+                            "description": "The path to the video file."
+                        },
+                        "audioPath": {
+                            "type": "string",
+                            "description": "The path to the audio file."
+                        },
+                        "callback": {
+                            "type": "function()",
+                            "description": "The callback to call when the video is finished."
+                        }
                     }
                 },
                 "resetMouseState": {
@@ -171,15 +330,27 @@
                 "setCursor": {
                     "description": "Sets the cursor sprite and offsets.",
                     "params": {
-                        "sprite": { "type": "Sprite", "description": "The sprite to use for the cursor." },
-                        "offsetX": { "type": "number", "description": "The X offset of the cursor." },
-                        "offsetY": { "type": "number", "description": "The Y offset of the cursor." }
+                        "sprite": {
+                            "type": "Sprite",
+                            "description": "The sprite to use for the cursor."
+                        },
+                        "offsetX": {
+                            "type": "number",
+                            "description": "The X offset of the cursor."
+                        },
+                        "offsetY": {
+                            "type": "number",
+                            "description": "The Y offset of the cursor."
+                        }
                     }
                 },
                 "showSystemCursor": {
                     "description": "Sets the visibility of the system cursor.",
                     "params": {
-                        "show": { "type": "boolean", "description": "The visibility of the system cursor." }
+                        "show": {
+                            "type": "boolean",
+                            "description": "The visibility of the system cursor."
+                        }
                     }
                 },
                 "shutdown": {
@@ -187,17 +358,1011 @@
                 },
                 "utf16To8": {
                     "description": "Converts UTF16 strings to UTF8 strings.",
-                    "returns": { "type": "string", "description": "The string in UTF8 format." },
+                    "returns": {
+                        "type": "string",
+                        "description": "The string in UTF8 format."
+                    },
                     "params": {
-                        "sourceString": { "type": "string", "description": "The string in UTF16 format." }
+                        "sourceString": {
+                            "type": "string",
+                            "description": "The string in UTF16 format."
+                        }
                     }
                 },
                 "worldToOrtho": {
                     "description": "Converts world coordinates to orthographic coordinates.",
-                    "returns": { "type": "number, number", "description": "The X/Y ortho coordinates." },
+                    "returns": {
+                        "type": "number, number",
+                        "description": "The X/Y ortho coordinates."
+                    },
                     "params": {
-                        "worldX": { "type": "number", "description": "The world X coordinate." },
-                        "worldY": { "type": "number", "description": "The world Y coordinate." }
+                        "worldX": {
+                            "type": "number",
+                            "description": "The world X coordinate."
+                        },
+                        "worldY": {
+                            "type": "number",
+                            "description": "The world Y coordinate."
+                        }
+                    }
+                }
+            },
+            "tables": {
+                "scanCodes": {
+                    "description": "The scancodes used in keyboard events and functions.",
+                    "values": {
+                        "UNKNOWN": {
+                            "type": "number",
+                            "value": 0
+                        },
+                        "A": {
+                            "type": "number",
+                            "value": 4
+                        },
+                        "B": {
+                            "type": "number",
+                            "value": 5
+                        },
+                        "C": {
+                            "type": "number",
+                            "value": 6
+                        },
+                        "D": {
+                            "type": "number",
+                            "value": 7
+                        },
+                        "E": {
+                            "type": "number",
+                            "value": 8
+                        },
+                        "F": {
+                            "type": "number",
+                            "value": 9
+                        },
+                        "G": {
+                            "type": "number",
+                            "value": 10
+                        },
+                        "H": {
+                            "type": "number",
+                            "value": 11
+                        },
+                        "I": {
+                            "type": "number",
+                            "value": 12
+                        },
+                        "J": {
+                            "type": "number",
+                            "value": 13
+                        },
+                        "K": {
+                            "type": "number",
+                            "value": 14
+                        },
+                        "L": {
+                            "type": "number",
+                            "value": 15
+                        },
+                        "M": {
+                            "type": "number",
+                            "value": 16
+                        },
+                        "N": {
+                            "type": "number",
+                            "value": 17
+                        },
+                        "O": {
+                            "type": "number",
+                            "value": 18
+                        },
+                        "P": {
+                            "type": "number",
+                            "value": 19
+                        },
+                        "Q": {
+                            "type": "number",
+                            "value": 20
+                        },
+                        "R": {
+                            "type": "number",
+                            "value": 21
+                        },
+                        "S": {
+                            "type": "number",
+                            "value": 22
+                        },
+                        "T": {
+                            "type": "number",
+                            "value": 23
+                        },
+                        "U": {
+                            "type": "number",
+                            "value": 24
+                        },
+                        "V": {
+                            "type": "number",
+                            "value": 25
+                        },
+                        "W": {
+                            "type": "number",
+                            "value": 26
+                        },
+                        "X": {
+                            "type": "number",
+                            "value": 27
+                        },
+                        "Y": {
+                            "type": "number",
+                            "value": 28
+                        },
+                        "Z": {
+                            "type": "number",
+                            "value": 29
+                        },
+                        "NUM_1": {
+                            "type": "number",
+                            "value": 30
+                        },
+                        "NUM_2": {
+                            "type": "number",
+                            "value": 31
+                        },
+                        "NUM_3": {
+                            "type": "number",
+                            "value": 32
+                        },
+                        "NUM_4": {
+                            "type": "number",
+                            "value": 33
+                        },
+                        "NUM_5": {
+                            "type": "number",
+                            "value": 34
+                        },
+                        "NUM_6": {
+                            "type": "number",
+                            "value": 35
+                        },
+                        "NUM_7": {
+                            "type": "number",
+                            "value": 36
+                        },
+                        "NUM_8": {
+                            "type": "number",
+                            "value": 37
+                        },
+                        "NUM_9": {
+                            "type": "number",
+                            "value": 38
+                        },
+                        "NUM_0": {
+                            "type": "number",
+                            "value": 39
+                        },
+                        "RETURN": {
+                            "type": "number",
+                            "value": 40
+                        },
+                        "ESCAPE": {
+                            "type": "number",
+                            "value": 41
+                        },
+                        "BACKSPACE": {
+                            "type": "number",
+                            "value": 42
+                        },
+                        "TAB": {
+                            "type": "number",
+                            "value": 43
+                        },
+                        "SPACE": {
+                            "type": "number",
+                            "value": 44
+                        },
+                        "MINUS": {
+                            "type": "number",
+                            "value": 45
+                        },
+                        "EQUALS": {
+                            "type": "number",
+                            "value": 46
+                        },
+                        "LEFTBRACKET": {
+                            "type": "number",
+                            "value": 47
+                        },
+                        "RIGHTBRACKET": {
+                            "type": "number",
+                            "value": 48
+                        },
+                        "BACKSLASH": {
+                            "type": "number",
+                            "value": 49
+                        },
+                        "NONUSHASH": {
+                            "type": "number",
+                            "value": 50
+                        },
+                        "SEMICOLON": {
+                            "type": "number",
+                            "value": 51
+                        },
+                        "APOSTROPHE": {
+                            "type": "number",
+                            "value": 52
+                        },
+                        "GRAVE": {
+                            "type": "number",
+                            "value": 53
+                        },
+                        "COMMA": {
+                            "type": "number",
+                            "value": 54
+                        },
+                        "PERIOD": {
+                            "type": "number",
+                            "value": 55
+                        },
+                        "SLASH": {
+                            "type": "number",
+                            "value": 56
+                        },
+                        "CAPSLOCK": {
+                            "type": "number",
+                            "value": 57
+                        },
+                        "F1": {
+                            "type": "number",
+                            "value": 58
+                        },
+                        "F2": {
+                            "type": "number",
+                            "value": 59
+                        },
+                        "F3": {
+                            "type": "number",
+                            "value": 60
+                        },
+                        "F4": {
+                            "type": "number",
+                            "value": 61
+                        },
+                        "F5": {
+                            "type": "number",
+                            "value": 62
+                        },
+                        "F6": {
+                            "type": "number",
+                            "value": 63
+                        },
+                        "F7": {
+                            "type": "number",
+                            "value": 64
+                        },
+                        "F8": {
+                            "type": "number",
+                            "value": 65
+                        },
+                        "F9": {
+                            "type": "number",
+                            "value": 66
+                        },
+                        "F10": {
+                            "type": "number",
+                            "value": 67
+                        },
+                        "F11": {
+                            "type": "number",
+                            "value": 68
+                        },
+                        "F12": {
+                            "type": "number",
+                            "value": 69
+                        },
+                        "PRINTSCREEN": {
+                            "type": "number",
+                            "value": 70
+                        },
+                        "SCROLLLOCK": {
+                            "type": "number",
+                            "value": 71
+                        },
+                        "PAUSE": {
+                            "type": "number",
+                            "value": 72
+                        },
+                        "INSERT": {
+                            "type": "number",
+                            "value": 73
+                        },
+                        "HOME": {
+                            "type": "number",
+                            "value": 74
+                        },
+                        "PAGEUP": {
+                            "type": "number",
+                            "value": 75
+                        },
+                        "DELETE": {
+                            "type": "number",
+                            "value": 76
+                        },
+                        "END": {
+                            "type": "number",
+                            "value": 77
+                        },
+                        "PAGEDOWN": {
+                            "type": "number",
+                            "value": 78
+                        },
+                        "RIGHT": {
+                            "type": "number",
+                            "value": 79
+                        },
+                        "LEFT": {
+                            "type": "number",
+                            "value": 80
+                        },
+                        "DOWN": {
+                            "type": "number",
+                            "value": 81
+                        },
+                        "UP": {
+                            "type": "number",
+                            "value": 82
+                        },
+                        "NUMLOCKCLEAR": {
+                            "type": "number",
+                            "value": 83
+                        },
+                        "KP_DIVIDE": {
+                            "type": "number",
+                            "value": 84
+                        },
+                        "KP_MULTIPLY": {
+                            "type": "number",
+                            "value": 85
+                        },
+                        "KP_MINUS": {
+                            "type": "number",
+                            "value": 86
+                        },
+                        "KP_PLUS": {
+                            "type": "number",
+                            "value": 87
+                        },
+                        "KP_ENTER": {
+                            "type": "number",
+                            "value": 88
+                        },
+                        "KP_1": {
+                            "type": "number",
+                            "value": 89
+                        },
+                        "KP_2": {
+                            "type": "number",
+                            "value": 90
+                        },
+                        "KP_3": {
+                            "type": "number",
+                            "value": 91
+                        },
+                        "KP_4": {
+                            "type": "number",
+                            "value": 92
+                        },
+                        "KP_5": {
+                            "type": "number",
+                            "value": 93
+                        },
+                        "KP_6": {
+                            "type": "number",
+                            "value": 94
+                        },
+                        "KP_7": {
+                            "type": "number",
+                            "value": 95
+                        },
+                        "KP_8": {
+                            "type": "number",
+                            "value": 96
+                        },
+                        "KP_9": {
+                            "type": "number",
+                            "value": 97
+                        },
+                        "KP_0": {
+                            "type": "number",
+                            "value": 98
+                        },
+                        "KP_PERIOD": {
+                            "type": "number",
+                            "value": 99
+                        },
+                        "NONUSBACKSLASH": {
+                            "type": "number",
+                            "value": 100
+                        },
+                        "APPLICATION": {
+                            "type": "number",
+                            "value": 101
+                        },
+                        "POWER": {
+                            "type": "number",
+                            "value": 102
+                        },
+                        "KP_EQUALS": {
+                            "type": "number",
+                            "value": 103
+                        },
+                        "F13": {
+                            "type": "number",
+                            "value": 104
+                        },
+                        "F14": {
+                            "type": "number",
+                            "value": 105
+                        },
+                        "F15": {
+                            "type": "number",
+                            "value": 106
+                        },
+                        "F16": {
+                            "type": "number",
+                            "value": 107
+                        },
+                        "F17": {
+                            "type": "number",
+                            "value": 108
+                        },
+                        "F18": {
+                            "type": "number",
+                            "value": 109
+                        },
+                        "F19": {
+                            "type": "number",
+                            "value": 110
+                        },
+                        "F20": {
+                            "type": "number",
+                            "value": 111
+                        },
+                        "F21": {
+                            "type": "number",
+                            "value": 112
+                        },
+                        "F22": {
+                            "type": "number",
+                            "value": 113
+                        },
+                        "F23": {
+                            "type": "number",
+                            "value": 114
+                        },
+                        "F24": {
+                            "type": "number",
+                            "value": 115
+                        },
+                        "EXECUTE": {
+                            "type": "number",
+                            "value": 116
+                        },
+                        "HELP": {
+                            "type": "number",
+                            "value": 117
+                        },
+                        "MENU": {
+                            "type": "number",
+                            "value": 118
+                        },
+                        "SELECT": {
+                            "type": "number",
+                            "value": 119
+                        },
+                        "STOP": {
+                            "type": "number",
+                            "value": 120
+                        },
+                        "AGAIN": {
+                            "type": "number",
+                            "value": 121
+                        },
+                        "UNDO": {
+                            "type": "number",
+                            "value": 122
+                        },
+                        "CUT": {
+                            "type": "number",
+                            "value": 123
+                        },
+                        "COPY": {
+                            "type": "number",
+                            "value": 124
+                        },
+                        "PASTE": {
+                            "type": "number",
+                            "value": 125
+                        },
+                        "FIND": {
+                            "type": "number",
+                            "value": 126
+                        },
+                        "MUTE": {
+                            "type": "number",
+                            "value": 127
+                        },
+                        "VOLUMEUP": {
+                            "type": "number",
+                            "value": 128
+                        },
+                        "VOLUMEDOWN": {
+                            "type": "number",
+                            "value": 129
+                        },
+                        "KP_COMMA": {
+                            "type": "number",
+                            "value": 133
+                        },
+                        "KP_EQUALSAS400": {
+                            "type": "number",
+                            "value": 134
+                        },
+                        "INTERNATIONAL1": {
+                            "type": "number",
+                            "value": 135
+                        },
+                        "INTERNATIONAL2": {
+                            "type": "number",
+                            "value": 136
+                        },
+                        "INTERNATIONAL3": {
+                            "type": "number",
+                            "value": 137
+                        },
+                        "INTERNATIONAL4": {
+                            "type": "number",
+                            "value": 138
+                        },
+                        "INTERNATIONAL5": {
+                            "type": "number",
+                            "value": 139
+                        },
+                        "INTERNATIONAL6": {
+                            "type": "number",
+                            "value": 140
+                        },
+                        "INTERNATIONAL7": {
+                            "type": "number",
+                            "value": 141
+                        },
+                        "INTERNATIONAL8": {
+                            "type": "number",
+                            "value": 142
+                        },
+                        "INTERNATIONAL9": {
+                            "type": "number",
+                            "value": 143
+                        },
+                        "LANG1": {
+                            "type": "number",
+                            "value": 144
+                        },
+                        "LANG2": {
+                            "type": "number",
+                            "value": 145
+                        },
+                        "LANG3": {
+                            "type": "number",
+                            "value": 146
+                        },
+                        "LANG4": {
+                            "type": "number",
+                            "value": 147
+                        },
+                        "LANG5": {
+                            "type": "number",
+                            "value": 148
+                        },
+                        "LANG6": {
+                            "type": "number",
+                            "value": 149
+                        },
+                        "LANG7": {
+                            "type": "number",
+                            "value": 150
+                        },
+                        "LANG8": {
+                            "type": "number",
+                            "value": 151
+                        },
+                        "LANG9": {
+                            "type": "number",
+                            "value": 152
+                        },
+                        "ALTERASE": {
+                            "type": "number",
+                            "value": 153
+                        },
+                        "SYSREQ": {
+                            "type": "number",
+                            "value": 154
+                        },
+                        "CANCEL": {
+                            "type": "number",
+                            "value": 155
+                        },
+                        "CLEAR": {
+                            "type": "number",
+                            "value": 156
+                        },
+                        "PRIOR": {
+                            "type": "number",
+                            "value": 157
+                        },
+                        "RETURN2": {
+                            "type": "number",
+                            "value": 158
+                        },
+                        "SEPARATOR": {
+                            "type": "number",
+                            "value": 159
+                        },
+                        "OUT": {
+                            "type": "number",
+                            "value": 160
+                        },
+                        "OPER": {
+                            "type": "number",
+                            "value": 161
+                        },
+                        "CLEARAGAIN": {
+                            "type": "number",
+                            "value": 162
+                        },
+                        "CRSEL": {
+                            "type": "number",
+                            "value": 163
+                        },
+                        "EXSEL": {
+                            "type": "number",
+                            "value": 164
+                        },
+                        "KP_00": {
+                            "type": "number",
+                            "value": 176
+                        },
+                        "KP_000": {
+                            "type": "number",
+                            "value": 177
+                        },
+                        "THOUSANDSSEPARATOR": {
+                            "type": "number",
+                            "value": 178
+                        },
+                        "DECIMALSEPARATOR": {
+                            "type": "number",
+                            "value": 179
+                        },
+                        "CURRENCYUNIT": {
+                            "type": "number",
+                            "value": 180
+                        },
+                        "CURRENCYSUBUNIT": {
+                            "type": "number",
+                            "value": 181
+                        },
+                        "KP_LEFTPAREN": {
+                            "type": "number",
+                            "value": 182
+                        },
+                        "KP_RIGHTPAREN": {
+                            "type": "number",
+                            "value": 183
+                        },
+                        "KP_LEFTBRACE": {
+                            "type": "number",
+                            "value": 184
+                        },
+                        "KP_RIGHTBRACE": {
+                            "type": "number",
+                            "value": 185
+                        },
+                        "KP_TAB": {
+                            "type": "number",
+                            "value": 186
+                        },
+                        "KP_BACKSPACE": {
+                            "type": "number",
+                            "value": 187
+                        },
+                        "KP_A": {
+                            "type": "number",
+                            "value": 188
+                        },
+                        "KP_B": {
+                            "type": "number",
+                            "value": 189
+                        },
+                        "KP_C": {
+                            "type": "number",
+                            "value": 190
+                        },
+                        "KP_D": {
+                            "type": "number",
+                            "value": 191
+                        },
+                        "KP_E": {
+                            "type": "number",
+                            "value": 192
+                        },
+                        "KP_F": {
+                            "type": "number",
+                            "value": 193
+                        },
+                        "KP_XOR": {
+                            "type": "number",
+                            "value": 194
+                        },
+                        "KP_POWER": {
+                            "type": "number",
+                            "value": 195
+                        },
+                        "KP_PERCENT": {
+                            "type": "number",
+                            "value": 196
+                        },
+                        "KP_LESS": {
+                            "type": "number",
+                            "value": 197
+                        },
+                        "KP_GREATER": {
+                            "type": "number",
+                            "value": 198
+                        },
+                        "KP_AMPERSAND": {
+                            "type": "number",
+                            "value": 199
+                        },
+                        "KP_DBLAMPERSAND": {
+                            "type": "number",
+                            "value": 200
+                        },
+                        "KP_VERTICALBAR": {
+                            "type": "number",
+                            "value": 201
+                        },
+                        "KP_DBLVERTICALBAR": {
+                            "type": "number",
+                            "value": 202
+                        },
+                        "KP_COLON": {
+                            "type": "number",
+                            "value": 203
+                        },
+                        "KP_HASH": {
+                            "type": "number",
+                            "value": 204
+                        },
+                        "KP_SPACE": {
+                            "type": "number",
+                            "value": 205
+                        },
+                        "KP_AT": {
+                            "type": "number",
+                            "value": 206
+                        },
+                        "KP_EXCLAM": {
+                            "type": "number",
+                            "value": 207
+                        },
+                        "KP_MEMSTORE": {
+                            "type": "number",
+                            "value": 208
+                        },
+                        "KP_MEMRECALL": {
+                            "type": "number",
+                            "value": 209
+                        },
+                        "KP_MEMCLEAR": {
+                            "type": "number",
+                            "value": 210
+                        },
+                        "KP_MEMADD": {
+                            "type": "number",
+                            "value": 211
+                        },
+                        "KP_MEMSUBTRACT": {
+                            "type": "number",
+                            "value": 212
+                        },
+                        "KP_MEMMULTIPLY": {
+                            "type": "number",
+                            "value": 213
+                        },
+                        "KP_MEMDIVIDE": {
+                            "type": "number",
+                            "value": 214
+                        },
+                        "KP_PLUSMINUS": {
+                            "type": "number",
+                            "value": 215
+                        },
+                        "KP_CLEAR": {
+                            "type": "number",
+                            "value": 216
+                        },
+                        "KP_CLEARENTRY": {
+                            "type": "number",
+                            "value": 217
+                        },
+                        "KP_BINARY": {
+                            "type": "number",
+                            "value": 218
+                        },
+                        "KP_OCTAL": {
+                            "type": "number",
+                            "value": 219
+                        },
+                        "KP_DECIMAL": {
+                            "type": "number",
+                            "value": 220
+                        },
+                        "KP_HEXADECIMAL": {
+                            "type": "number",
+                            "value": 221
+                        },
+                        "LCTRL": {
+                            "type": "number",
+                            "value": 224
+                        },
+                        "LSHIFT": {
+                            "type": "number",
+                            "value": 225
+                        },
+                        "LALT": {
+                            "type": "number",
+                            "value": 226
+                        },
+                        "LGUI": {
+                            "type": "number",
+                            "value": 227
+                        },
+                        "RCTRL": {
+                            "type": "number",
+                            "value": 228
+                        },
+                        "RSHIFT": {
+                            "type": "number",
+                            "value": 229
+                        },
+                        "RALT": {
+                            "type": "number",
+                            "value": 230
+                        },
+                        "RGUI": {
+                            "type": "number",
+                            "value": 231
+                        },
+                        "MODE": {
+                            "type": "number",
+                            "value": 257
+                        },
+                        "AUDIONEXT": {
+                            "type": "number",
+                            "value": 258
+                        },
+                        "AUDIOPREV": {
+                            "type": "number",
+                            "value": 259
+                        },
+                        "AUDIOSTOP": {
+                            "type": "number",
+                            "value": 260
+                        },
+                        "AUDIOPLAY": {
+                            "type": "number",
+                            "value": 261
+                        },
+                        "AUDIOMUTE": {
+                            "type": "number",
+                            "value": 262
+                        },
+                        "MEDIASELECT": {
+                            "type": "number",
+                            "value": 263
+                        },
+                        "WWW": {
+                            "type": "number",
+                            "value": 264
+                        },
+                        "MAIL": {
+                            "type": "number",
+                            "value": 265
+                        },
+                        "CALCULATOR": {
+                            "type": "number",
+                            "value": 266
+                        },
+                        "COMPUTER": {
+                            "type": "number",
+                            "value": 267
+                        },
+                        "AC_SEARCH": {
+                            "type": "number",
+                            "value": 268
+                        },
+                        "AC_HOME": {
+                            "type": "number",
+                            "value": 269
+                        },
+                        "AC_BACK": {
+                            "type": "number",
+                            "value": 270
+                        },
+                        "AC_FORWARD": {
+                            "type": "number",
+                            "value": 271
+                        },
+                        "AC_STOP": {
+                            "type": "number",
+                            "value": 272
+                        },
+                        "AC_REFRESH": {
+                            "type": "number",
+                            "value": 273
+                        },
+                        "AC_BOOKMARKS": {
+                            "type": "number",
+                            "value": 274
+                        },
+                        "BRIGHTNESSDOWN": {
+                            "type": "number",
+                            "value": 275
+                        },
+                        "BRIGHTNESSUP": {
+                            "type": "number",
+                            "value": 276
+                        },
+                        "DISPLAYSWITCH": {
+                            "type": "number",
+                            "value": 277
+                        },
+                        "KBDILLUMTOGGLE": {
+                            "type": "number",
+                            "value": 278
+                        },
+                        "KBDILLUMDOWN": {
+                            "type": "number",
+                            "value": 279
+                        },
+                        "KBDILLUMUP": {
+                            "type": "number",
+                            "value": 280
+                        },
+                        "EJECT": {
+                            "type": "number",
+                            "value": 281
+                        },
+                        "SLEEP": {
+                            "type": "number",
+                            "value": 282
+                        },
+                        "APP1": {
+                            "type": "number",
+                            "value": 283
+                        },
+                        "APP2": {
+                            "type": "number",
+                            "value": 284
+                        },
+                        "AUDIOREWIND": {
+                            "type": "number",
+                            "value": 285
+                        },
+                        "AUDIOFASTFORWARD": {
+                            "type": "number",
+                            "value": 286
+                        }
                     }
                 }
             }
@@ -207,7 +1372,10 @@
             "functions": {
                 "nodeType": {
                     "description": "Returns the type of this node.",
-                    "returns": { "type": "string", "description": "The type of this node." }
+                    "returns": {
+                        "type": "string",
+                        "description": "The type of this node."
+                    }
                 },
                 "removeAllChildren": {
                     "description": "Removes all children owned by this node."
@@ -215,34 +1383,55 @@
                 "appendChild": {
                     "description": "Appends a child to this node.",
                     "params": {
-                        "childNode": { "type": "Node", "description": "The node to append to this node." }
+                        "childNode": {
+                            "type": "Node",
+                            "description": "The node to append to this node."
+                        }
                     }
                 },
                 "removeChild": {
                     "description": "Removes a child from this node.",
                     "params": {
-                        "childNode": { "type": "Node", "description": "The node to remove." }
+                        "childNode": {
+                            "type": "Node",
+                            "description": "The node to remove."
+                        }
                     }
                 },
                 "getChildren": {
                     "description": "Returns the nodes that are children of this node.",
-                    "returns": { "type": "Node[]", "description": "A table of nodes representing the children of this node." }
+                    "returns": {
+                        "type": "Node[]",
+                        "description": "A table of nodes representing the children of this node."
+                    }
                 },
                 "getPosition": {
                     "description": "Gets the X/Y position of the node, relative to its parent.",
-                    "returns": { "type": "number, number", "description": "The X/Y position of the node, relative to its parent." }
+                    "returns": {
+                        "type": "number, number",
+                        "description": "The X/Y position of the node, relative to its parent."
+                    }
                 },
                 "setPosition": {
                     "description": "Sets the X/Y position of the node, relative to its parent.",
                     "params": {
-                        "x": { "type": "number", "description": "The relative X coordinate." },
-                        "y": { "type": "number", "description": "The relative Y coordinate." }
+                        "x": {
+                            "type": "number",
+                            "description": "The relative X coordinate."
+                        },
+                        "y": {
+                            "type": "number",
+                            "description": "The relative Y coordinate."
+                        }
                     }
                 },
                 "onUpdate": {
                     "description": "Sets a callback handler for this node, which is triggered when the node is updated.",
                     "params": {
-                        "callback": { "type": "functions(ticks number)", "description": "The handler function that will be called each time this node is updated." }
+                        "callback": {
+                            "type": "functions(ticks number)",
+                            "description": "The handler function that will be called each time this node is updated."
+                        }
                     }
                 }
             }
@@ -261,11 +1450,17 @@
             "functions": {
                 "getFrameSize": {
                     "description": "Gets the frame size of this image.",
-                    "returns": { "type": "number, number", "description": "Gets the Width/Height of this image." }
+                    "returns": {
+                        "type": "number, number",
+                        "description": "Gets the Width/Height of this image."
+                    }
                 },
                 "getNumberOfFrames": {
                     "description": "Gets the number of frames in this image.",
-                    "returns": { "type": "number", "description": "The number of frames in this image." }
+                    "returns": {
+                        "type": "number",
+                        "description": "The number of frames in this image."
+                    }
                 }
             }
         },
@@ -273,49 +1468,103 @@
             "description": "Represents a UI button. Buttons are a type of node",
             "isNode": true,
             "properties": {
-                "disabled": { "type": "boolean", "description": "True if the button is disabled, false otherwise." },
-                "checked": { "type": "boolean", "description": "True if the button is checked. false otherwise." }
+                "disabled": {
+                    "type": "boolean",
+                    "description": "True if the button is disabled, false otherwise."
+                },
+                "checked": {
+                    "type": "boolean",
+                    "description": "True if the button is checked. false otherwise."
+                }
             },
             "functions": {
                 "setSegments": {
-                    "description": "",
-                    "returns": { "type": "", "description": ""},
-                    "params": {}
+                    "description": "Sets the number of segments in the image.",
+                    "params": {
+                        "x": {
+                            "type": "number",
+                            "description": "The number of horizontal segments."
+                        },
+                        "y": {
+                            "type": "number",
+                            "description": "The number of vertical segments."
+                        }
+                    }
                 },
                 "setFixedSize": {
-                    "description": "",
-                    "returns": { "type": "", "description": ""},
-                    "params": {}
+                    "description": "Sets the fixed size of the button.",
+                    "params": {
+                        "width": {
+                            "type": "number",
+                            "description": "The width of the button."
+                        },
+                        "height": {
+                            "type": "number",
+                            "description": "The height of the button."
+                        }
+                    }
                 },
                 "setPressedOffset": {
-                    "description": "",
-                    "returns": { "type": "", "description": ""},
-                    "params": {}
+                    "description": "Sets the X/Y offset of the label when the button is pressed.",
+                    "params": {
+                        "x": {
+                            "type": "number",
+                            "description": "The X offset of the label."
+                        },
+                        "y": {
+                            "type": "number",
+                            "description": "The Y offset of the label."
+                        }
+                    }
                 },
                 "setFrameIndex": {
-                    "description": "",
-                    "returns": { "type": "", "description": ""},
-                    "params": {}
+                    "description": "Sets the frame index for the specified frame type.",
+                    "params": {
+                        "frameType": {
+                            "type": "string",
+                            "description": "The frame type ('normal', 'pressed', 'hover', 'disabled', 'checkednormal', 'checkedhover', 'checkedpressed')"
+                        },
+                        "frameIndex": {
+                            "type": "number",
+                            "description": "The frame index for this state."
+                        }
+                    }
                 },
                 "onActivate": {
-                    "description": "",
-                    "returns": { "type": "", "description": ""},
-                    "params": {}
+                    "description": "Sets the callback to be called when the button is activated (clicked).",
+                    "params": {
+                        "callback": {
+                            "type": "function()",
+                            "description": "The callback to call when the button is activated."
+                        }
+                    }
                 },
                 "onPressed": {
-                    "description": "",
-                    "returns": { "type": "", "description": ""},
-                    "params": {}
+                    "description": "Sets the callback to be called when the button is pressed.",
+                    "params": {
+                        "callback": {
+                            "type": "function()",
+                            "description": "The callback to call when the button is pressed."
+                        }
+                    }
                 },
                 "onMouseEnter": {
-                    "description": "",
-                    "returns": { "type": "", "description": ""},
-                    "params": {}
+                    "description": "Sets the callback to be called when the mouse hovers over the button.",
+                    "params": {
+                        "callback": {
+                            "type": "function()",
+                            "description": "The callback to call when the mouse hovers over the button."
+                        }
+                    }
                 },
                 "onMouseLeave": {
-                    "description": "",
-                    "returns": { "type": "", "description": ""},
-                    "params": {}
+                    "description": "Sets the callback to be called when the mouse leaves the button (no longer hovering).",
+                    "params": {
+                        "callback": {
+                            "type": "function()",
+                            "description": "The callback to call when the mouse no longer hovers over the button."
+                        }
+                    }
                 }
             }
         },
@@ -323,24 +1572,65 @@
             "description": "Represents a label. Labels are a type of node",
             "isNode": true,
             "properties": {
-                "caption": { "type": "", "description": "" },
-                "blendMode": { "type": "", "description": "" },
-                "bold": { "type": "", "description": "" },
-                "italic": { "type": "", "description": "" },
-                "underline": { "type": "", "description": "" },
-                "strikethrough": { "type": "", "description": "" },
-                "verticalSpacing": { "type": "", "description": "" }
+                "caption": {
+                    "type": "string",
+                    "description": "The caption (text) of the label."
+                },
+                "blendMode": {
+                    "type": "string",
+                    "description": "The blend mode of the label ('none', 'blend', 'additive', 'modulus', 'multiply')."
+                },
+                "bold": {
+                    "type": "bool",
+                    "description": "Determines if the font is bold (TTF only)."
+                },
+                "italic": {
+                    "type": "bool",
+                    "description": "Determines if the font is italic (TTF only)."
+                },
+                "underline": {
+                    "type": "bool",
+                    "description": "Determines if the font has an underline (TTF only)."
+                },
+                "strikethrough": {
+                    "type": "bool",
+                    "description": "Determines if the font has a strikethrough (TTF only)."
+                },
+                "verticalSpacing": {
+                    "type": "number",
+                    "description": "The number of pixels between each line when the label has multiple lines of text."
+                }
             },
             "functions": {
                 "setAlignment": {
-                    "description": "",
-                    "returns": { "type": "", "description": "" },
-                    "params": {}
+                    "description": "Sets the horizontal and vertical alignment of the label.",
+                    "params": {
+                        "hAlign": {
+                            "type": "string",
+                            "description": "The horizontal alignment of the label ('start', 'middle', 'end')."
+                        },
+                        "vAlign": {
+                            "type": "string",
+                            "description": "The vertical alignment of the label ('start', 'middle', 'end')."
+                        }
+                    }
                 },
                 "setColorMod": {
-                    "description": "",
-                    "returns": { "type": "", "description": "" },
-                    "params": {}
+                    "description": "Sets the red/green/blue color modulation for the label.",
+                    "params": {
+                        "red": {
+                            "type": "number",
+                            "description": "The red component (0-255) of the color modulation."
+                        },
+                        "green": {
+                            "type": "number",
+                            "description": "The green component (0-255) of the color modulation."
+                        },
+                        "blue": {
+                            "type": "number",
+                            "description": "The blue component (0-255) of the color modulation."
+                        }
+                    }
                 }
             }
         },
@@ -348,83 +1638,330 @@
             "description": "Represents a sprite. Sprites are a type of node.",
             "isNode": true,
             "properties": {
-                "blendMode": { "type": "", "description": "" },
-                "bottomOrigin": { "type": "", "description": "" },
-                "playMode": { "type": "", "description": "" },
-                "currentFrameIndex": { "type": "", "description": "" }
+                "blendMode": {
+                    "type": "string",
+                    "description": "The blend mode of this sprite ('none', 'blend', 'additive', 'modulus', 'multiply')."
+                },
+                "bottomOrigin": {
+                    "type": "bool",
+                    "description": "If true, the sprite's Y position corresponds to the bottom of the image."
+                },
+                "playMode": {
+                    "type": "string",
+                    "description": "Sets the play (an animation) mode of the image ('paused', 'forward', 'backwards')."
+                },
+                "currentFrameIndex": {
+                    "type": "number",
+                    "description": "The index of the current frame being shown by the sprite."
+                }
             },
             "functions": {
                 "setCellSize": {
-                    "description": "",
-                    "returns": { "type": "", "description": "" },
-                    "params": {}
+                    "description": "Sets the size of a single cell in the image.",
+                    "params": {
+                        "cellSizeWidth": {
+                            "type": "number",
+                            "description": "The width of a single cell in the sprite."
+                        },
+                        "cellSizeHeight": {
+                            "type": "number",
+                            "description": "The height of a single cell in the sprite."
+                        }
+                    }
                 },
                 "getCellSize": {
-                    "description": "",
-                    "returns": { "type": "", "description": "" },
-                    "params": {}
+                    "description": "Gets the width/height of a single cell in the image",
+                    "returns": {
+                        "type": "number, number",
+                        "description": "The width/height of a single cell in the image."
+                    }
                 },
                 "onMouseButtonDown": {
-                    "description": "",
-                    "returns": { "type": "", "description": "" },
-                    "params": {}
+                    "description": "Sets the callback to handle mouse button down events.",
+                    "params": {
+                        "callback": {
+                            "type": "function()",
+                            "description": "The callback to call when the mouse is pressed on the image."
+                        }
+                    }
                 },
                 "onMouseButtonUp": {
-                    "description": "",
-                    "returns": { "type": "", "description": "" },
-                    "params": {}
+                    "description": "Sets the callback to handle mouse button up events.",
+                    "params": {
+                        "callback": {
+                            "type": "function()",
+                            "description": "The callback to call when the mouse is released on the image."
+                        }
+                    }
                 }
             }
         },
         "InputListener": {
-            "description": "Represents an Input Kistener.",
+            "description": "Represents an Input Listener. All input listeners recieve global input events every time they happen.",
             "isNode": true,
             "functions": {
                 "onMouseButton": {
-                    "description": "",
-                    "returns": { "type": "", "description": "" }
+                    "description": "Sets the callback to call when a mouse button is pressed",
+                    "params": {
+                        "callback": {
+                            "type": "function(button)",
+                            "description": "The callback to call when a mouse button is pressed."
+                        }
+                    }
                 },
                 "onMouseMove": {
-                    "description": "",
-                    "returns": { "type": "", "description": "" }
+                    "description": "Sets the callback to call when the mouse has moved.",
+                    "params": {
+                        "callback": {
+                            "type": "function(x, y)",
+                            "description": "The callback to call when a mouse is moved."
+                        }
+                    }
                 },
                 "onKey": {
-                    "description": "",
-                    "returns": { "type": "", "description": "" }
+                    "description": "Sets the callback to call when a key has been pressed or released.",
+                    "params": {
+                        "callback": {
+                            "type": "function(scancode, pressed)",
+                            "description": "The callback to call when a key is pressed or released."
+                        }
+                    }
                 }
             }
         },
         "SoundEffect": {
             "description": "Represents a sound effect.",
             "properties": {
-                "volume": { "type": "", "description": "" },
-                "loop": { "type": "", "description": "" }
+                "volume": {
+                    "type": "number",
+                    "description": "The volume of the sound effect (0.0 - 1.0)."
+                },
+                "loop": {
+                    "type": "boolean",
+                    "description": "If true, the sound effect will loop continously."
+                }
             },
             "functions": {
                 "play": {
-                    "description": "",
-                    "returns": { "type": "", "description": "" },
-                    "params": {}
+                    "description": "Plays or resumes the sound effect."
                 },
                 "stop": {
-                    "description": "",
-                    "returns": { "type": "", "description": "" },
-                    "params": {}
+                    "description": "Stops the sound effect and resets the playback to the start."
                 },
                 "pause": {
-                    "description": "",
-                    "returns": { "type": "", "description": "" },
-                    "params": {}
+                    "description": "Pauses the playback of the sound effect."
                 },
                 "isPlaying": {
-                    "description": "",
-                    "returns": { "type": "", "description": "" },
-                    "params": {}
+                    "description": "Returns the playing status of the sound effect.",
+                    "returns": {
+                        "type": "boolean",
+                        "description": "True if the sound effect is currently playing, otherwise False."
+                    }
                 },
                 "isPaused": {
-                    "description": "",
-                    "returns": { "type": "", "description": "" },
-                    "params": {}
+                    "description": "Returns the paused status of the sound effect.",
+                    "returns": {
+                        "type": "boolean",
+                        "description": "True if the sound effect is currently paused, otherwise False."
+                    }
+                }
+            }
+        },
+        "MapRenderer": {
+            "description": "The map renderer.",
+            "isNode": true,
+            "properties": {
+                "showOuterBorder": {
+                    "type": "boolean",
+                    "description": "Shows a green border around the map if true."
+                }
+            },
+            "functions": {
+                "compile": {
+                    "description": "Compiles changes to the zone and generates the texture cache for rendering. This must be done after changes to the associated zone."
+                }
+            }
+        },
+        "LevelType": {
+            "description": "Represents a level type record.",
+            "properties": {
+                "files": {
+                    "type": "string[]",
+                    "description": ""
+                },
+                "name": {
+                    "type": "string",
+                    "description": ""
+                },
+                "id": {
+                    "type": "number",
+                    "description": ""
+                },
+                "act": {
+                    "type": "number",
+                    "description": ""
+                },
+                "beta": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "expansion": {
+                    "type": "boolean",
+                    "description": ""
+                }
+            }
+        },
+        "LevelPreset": {
+            "description": "Represents a level preset record.",
+            "properties": {
+                "files": {
+                    "type": "string[]",
+                    "description": ""
+                },
+                "name": {
+                    "type": "string",
+                    "description": ""
+                },
+                "definitionId": {
+                    "type": "number",
+                    "description": ""
+                },
+                "levelId": {
+                    "type": "number",
+                    "description": ""
+                },
+                "sizeX": {
+                    "type": "number",
+                    "description": ""
+                },
+                "sizeY": {
+                    "type": "number",
+                    "description": ""
+                },
+                "pops": {
+                    "type": "number",
+                    "description": ""
+                },
+                "popPad": {
+                    "type": "number",
+                    "description": ""
+                },
+                "dt1Mask": {
+                    "type": "number",
+                    "description": ""
+                },
+                "populate": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "logicals": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "outdoors": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "animate": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "killEdge": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "fillBlanks": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "autoMap": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "scan": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "beta": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "expansion": {
+                    "type": "boolean",
+                    "description": ""
+                }
+            }
+        },
+        "DS1": {
+            "description": "Represents a DS1 (a map stamp).",
+            "properties": {
+                "width": {
+                    "type": "number",
+                    "description": ""
+                },
+                "height": {
+                    "type": "number",
+                    "description": ""
+                }
+            }
+        },
+        "DT1": {
+            "description": "Represents a DT1 (a tileset).",
+            "properties": {
+                "type": {
+                    "type": "number",
+                    "description": ""
+                },
+                "mainIndex": {
+                    "type": "number",
+                    "description": ""
+                },
+                "subIndex": {
+                    "type": "number",
+                    "description": ""
+                }
+            }
+        },
+        "Zone": {
+            "description": "Represents a Zone (a map/area/region).",
+            "properties": {
+                "width": {
+                    "type": "number",
+                    "description": "The width of the zone (in tiles)."
+                },
+                "height": {
+                    "type": "number",
+                    "description": "The height of the zone (in tiles)."
+                }
+            },
+            "functions": {
+                "resetMap": {
+                    "description": "Resets the map, erasing all of the data and pre-loading the base level type files.",
+                    "params": {
+                        "levelType": { "type": "LevelType", "description": "The LevelType base for this map/zone." },
+                        "dt1Mask": { "type": "number", "description": "Binary mask (right to left) representing which DT1s to load from the LevelType" },
+                        "width": { "type": "number", "description": "The width of the map (in tiles)."},
+                        "height": { "type": "number", "description": "The height of the map (in tiles)."}
+                    }
+                },
+                "stamp": {
+                    "description": "Stamps a DS1 onto the zone.",
+                    "params": {
+                        "ds1": { "type": "DS1", "description": "The DS1 to stamp onto the zone." },
+                        "x": { "type": "number", "description": "The X coordinate of the top-left tile to place place the stamp at."},
+                        "y": { "type": "number", "description": "The Y coordinate of the top-left tile to place place the stamp at."}
+                    }
+                },
+                "getTileInfo": {
+                    "description": "Returns information about the tile at the specific location.",
+                    "returns": {
+                        "type": "number[]",
+                        "description": "An array of tile indexes (from bottom to top) for the current tile."
+                    },
+                    "params": {
+                        "x": { "type": "number", "description": "The X coordinate of the tile who's information you want to get."},
+                        "y": { "type": "number", "description": "The Y coordinate of the tile who's information you want to get."}
+                    }
                 }
             }
         }

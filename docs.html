@@ -35,6 +35,9 @@
             {{#each types}}
             <li><a href="#type-{{@key}}" style="font-weight: bold">{{@key}}</a>
               <ul style="margin-left: 14px;margin-bottom:16px;">
+                {{#each tables}}
+                <li style="font-size: 0.8em;"><a href="#table-{{@../key}}-{{@key}}">.{{@key}}</a></li>
+                {{/each}}
                 {{#each properties}}
                 <li style="font-size: 0.8em;"><a href="#prop-{{@../key}}-{{@key}}">.{{@key}}</a></li>
                 {{/each}}
@@ -68,14 +71,27 @@
               <div style="margin-bottom: 6px; font-size:0.9em;">{{description}}</div>
             </div>
             {{/each}}
-        </div>
+          </div>
           {{/if}}
+          {{#each tables}}
+          <hr />
+          <div>
+            <a name="table-{{@../key}}-{{@key}}"></a>
+            <h4 class="title is-4">{{@../key}}.{{@key}}</h4>
+            <div class="func-description">{{description}}</div>
+            <h5 class="title is-5" style="margin-bottom: 5px;">Values</h5>
+            {{#each values}}
+            <div class="table-item"><span class="table-item-name">{{@key}}</span><span class="table-item-type">{{type}}</span><span class="table-item-value">{{value}}</span></div>
+            {{/each}}
+          </div>
+          {{/each}}
           {{#each functions}}
           <hr />
           <div>
             <a name="func-{{@../key}}-{{@key}}"></a>
             <h4 class="title is-4">
-              {{@key}}({{funcparams this.params}}) {{#if returns}}<span class="func-return-type">{{returns.type}}</span>{{/if}}
+              {{@key}}({{funcparams this.params}}) {{#if returns}}<span
+                class="func-return-type">{{returns.type}}</span>{{/if}}
             </h4>
             <div class="func-description">{{this.description}}</div>
             {{#if this.params}}

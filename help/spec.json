@@ -1693,6 +1693,15 @@
                             "description": "The callback to call when the mouse is released on the image."
                         }
                     }
+                },
+                "onAnimationFinished": {
+                    "description": "Sets the callback to handle animation finished events.",
+                    "params": {
+                        "callback": {
+                            "type": "function()",
+                            "description": "The callback to call when the animation has completed a cycle."
+                        }
+                    }
                 }
             }
         },

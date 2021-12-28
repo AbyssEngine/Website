@@ -1653,6 +1653,10 @@
                 "currentFrameIndex": {
                     "type": "number",
                     "description": "The index of the current frame being shown by the sprite."
+                },
+                "loopAnimation": {
+                    "type": "boolean",
+                    "description": "When true (the default), animations loop after playing. When false the animation plays only once."
                 }
             },
             "functions": {

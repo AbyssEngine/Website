@@ -122,6 +122,10 @@
                         "paletteName": {
                             "type": "string",
                             "description": "The name of the palette to use for the font."
+                        },
+                        "useGlyphHeight": {
+                            "type": "boolean",
+                            "description": "Whether or not to use the glyph height as the height of the font."
                         }
                     }
                 },
@@ -205,7 +209,8 @@
                 "loadTbl": {
                     "description": "Loads a tbl file.",
                     "returns": {
-                        "type": "{}", "description": "A table representing the tbl file loaded."
+                        "type": "{}",
+                        "description": "A table representing the tbl file loaded."
                     },
                     "params": {
                         "filePath": { "type": "string", "description": "The path to the tbl file to load." }
@@ -1595,10 +1600,6 @@
                 "strikethrough": {
                     "type": "bool",
                     "description": "Determines if the font has a strikethrough (TTF only)."
-                },
-                "verticalSpacing": {
-                    "type": "number",
-                    "description": "The number of pixels between each line when the label has multiple lines of text."
                 }
             },
             "functions": {
@@ -1953,16 +1954,16 @@
                     "params": {
                         "levelType": { "type": "LevelType", "description": "The LevelType base for this map/zone." },
                         "dt1Mask": { "type": "number", "description": "Binary mask (right to left) representing which DT1s to load from the LevelType" },
-                        "width": { "type": "number", "description": "The width of the map (in tiles)."},
-                        "height": { "type": "number", "description": "The height of the map (in tiles)."}
+                        "width": { "type": "number", "description": "The width of the map (in tiles)." },
+                        "height": { "type": "number", "description": "The height of the map (in tiles)." }
                     }
                 },
                 "stamp": {
                     "description": "Stamps a DS1 onto the zone.",
                     "params": {
                         "ds1": { "type": "DS1", "description": "The DS1 to stamp onto the zone." },
-                        "x": { "type": "number", "description": "The X coordinate of the top-left tile to place place the stamp at."},
-                        "y": { "type": "number", "description": "The Y coordinate of the top-left tile to place place the stamp at."}
+                        "x": { "type": "number", "description": "The X coordinate of the top-left tile to place place the stamp at." },
+                        "y": { "type": "number", "description": "The Y coordinate of the top-left tile to place place the stamp at." }
                     }
                 },
                 "getTileInfo": {
@@ -1972,8 +1973,8 @@
                         "description": "An array of tile indexes (from bottom to top) for the current tile."
                     },
                     "params": {
-                        "x": { "type": "number", "description": "The X coordinate of the tile who's information you want to get."},
-                        "y": { "type": "number", "description": "The Y coordinate of the tile who's information you want to get."}
+                        "x": { "type": "number", "description": "The X coordinate of the tile who's information you want to get." },
+                        "y": { "type": "number", "description": "The Y coordinate of the tile who's information you want to get." }
                     }
                 }
             }

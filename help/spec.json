@@ -126,6 +126,10 @@
                         "useGlyphHeight": {
                             "type": "boolean",
                             "description": "Whether or not to use the glyph height as the height of the font."
+                        },
+                        "blendMode": {
+                            "type": "string",
+                            "description": "The blend mode to use for the font ('none', 'blend', 'additive', 'modulus', 'multiply')."
                         }
                     }
                 },
